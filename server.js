@@ -1,6 +1,14 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const bodyParser = require('body-parser')
+
+// Body Parser Middleware
+app.use(bodyParser.urlencoded({
+  extended: false
+}))
+
+app.use(bodyParser.json())
 // const mclient = require('mongodb');
 // Setting Port For Heroku Deployment
 
